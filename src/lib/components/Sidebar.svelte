@@ -30,7 +30,7 @@
 			></div>
 
 			<span class="mb-0.5">
-				<Tooltip content="Home">
+				<Tooltip content="Home" key1="G" key2="H">
 					<a
 						id="home"
 						href="/"
@@ -44,7 +44,7 @@
 			</span>
 
 			<span class="mb-0.5">
-				<Tooltip content="Metrics">
+				<Tooltip content="Metrics" key1="G" key2="M">
 					<a
 						id="metrics"
 						href="/metrics"
@@ -58,7 +58,7 @@
 			</span>
 
 			<span class="mb-0.5">
-				<Tooltip content="Watchlist">
+				<Tooltip content="Watchlist" key1="G" key2="W">
 					<a
 						id="watchlist"
 						href="/watchlist"
@@ -72,7 +72,7 @@
 			</span>
 
 			<span class="mb-0.5">
-				<Tooltip content="Preferences">
+				<Tooltip content="Preferences" key1="G" key2="P">
 					<a
 						id="preferences"
 						href="/preferences"
