@@ -1,3 +1,5 @@
+import { goto } from '$app/navigation';
+
 const keys = new Set();
 
 export function handleKeyDown(event: KeyboardEvent) {
@@ -15,23 +17,19 @@ export function handleKeyUp() {
 function checkCombination() {
 	if (keys.has('g')) {
 		if (keys.has('h')) {
-			const homeLink = document.querySelector('#home') as HTMLAnchorElement;
-			homeLink.click();
+			goto('/');
 		}
 
 		if (keys.has('m')) {
-			const metricsLink = document.querySelector('#metrics') as HTMLAnchorElement;
-			metricsLink.click();
+			goto('/metrics');
 		}
 
 		if (keys.has('w')) {
-			const watchlistLink = document.querySelector('#watchlist') as HTMLAnchorElement;
-			watchlistLink.click();
+			goto('/watchlist');
 		}
 
 		if (keys.has('p')) {
-			const preferencesLink = document.querySelector('#preferences') as HTMLAnchorElement;
-			preferencesLink.click();
+			goto('/preferences');
 		}
 	}
 }
