@@ -1,21 +1,31 @@
 <script lang="ts">
+	import type { Snippet } from 'svelte';
 	import * as Tooltip from './index';
 
-	let { content, key1, key2, children } = $props();
+	type TooltipProps = {
+		content: string;
+		key1?: string;
+		key2?: string;
+		children: Snippet;
+	};
+
+	let { content, key1, key2, children }: TooltipProps = $props();
 </script>
 
 <Tooltip.Provider>
 	<Tooltip.Root delayDuration={300}>
 		<Tooltip.Trigger>
-			{@render children?.()}
+			{@render children()}
 		</Tooltip.Trigger>
 		<Tooltip.Content side="right" sideOffset={25}>
 			<p class="text-[13px] tracking-wide">
 				{content}
-				<span class="pl-3.5"></span>
-				<span class="bg-black-500/50 text-xs rounded px-1 py-[1px]">{key1}</span>
-				then
-				<span class="bg-black-500/50 text-xs rounded px-1 py-[1px]">{key2}</span>
+				{#if key1 && key2}
+					<span class="pl-3.5"></span>
+					<span class="bg-black-500/40 rounded px-1 py-[1px] text-xs">{key1}</span>
+					then
+					<span class="bg-black-500/40 rounded px-1 py-[1px] text-xs">{key2}</span>
+				{/if}
 			</p>
 		</Tooltip.Content>
 	</Tooltip.Root>

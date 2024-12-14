@@ -4,7 +4,6 @@ const keys = new Set();
 
 export function handleKeyDown(event: KeyboardEvent) {
 	keys.add(event.key.toLowerCase());
-	console.log(keys);
 	checkCombination();
 }
 
