@@ -68,7 +68,7 @@ const config: Config = {
 			},
 			fontFamily: {
 				sans: [...fontFamily.sans],
-				satoshi: ['Satoshi-Variable']
+				satoshi: ['Satoshi-Variable', 'ui-sans-serif']
 			}
 		}
 	}
