@@ -5,12 +5,12 @@
 </script>
 
 <Tooltip.Provider>
-	<Tooltip.Root delayDuration={250}>
+	<Tooltip.Root delayDuration={300}>
 		<Tooltip.Trigger>
 			{@render children?.()}
 		</Tooltip.Trigger>
 		<Tooltip.Content side="right" sideOffset={25}>
-			<p>{content}</p>
+			<p class="text-[13px] tracking-wide">{content}</p>
 		</Tooltip.Content>
 	</Tooltip.Root>
 </Tooltip.Provider>

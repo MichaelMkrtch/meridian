@@ -4,6 +4,7 @@
 	import PreferencesIcon from './icons/PreferencesIcon.svelte';
 	import WatchlistIcon from './icons/WatchlistIcon.svelte';
 	import Tooltip from './ui/tooltip/Tooltip.svelte';
+	import { handleKeyDown, handleKeyUp } from '$lib/shortcuts.svelte.';
 
 	let currentLink = $state(1);
 
@@ -11,6 +12,8 @@
 		currentLink = linkNum;
 	}
 </script>
+
+<svelte:window onkeydown={handleKeyDown} onkeyup={handleKeyUp} />
 
 <section class="bg-gradient-highlight absolute left-0 top-0 h-full w-[51px] pr-[1px]">
 	<div class="bg-black-900 flex h-full w-full flex-col items-center justify-center">
@@ -29,6 +32,7 @@
 			<span class="mb-0.5">
 				<Tooltip content="Home">
 					<a
+						id="home"
 						href="/"
 						onclick={() => updateCurrentLink(1)}
 						class:text-blue-400={currentLink === 1}
@@ -42,7 +46,8 @@
 			<span class="mb-0.5">
 				<Tooltip content="Metrics">
 					<a
-						href="/"
+						id="metrics"
+						href="/metrics"
 						onclick={() => updateCurrentLink(2)}
 						class:text-blue-400={currentLink === 2}
 						class="before:hover:bg-black-500 relative z-10 flex items-center justify-center transition-all duration-200 ease-out before:absolute before:-z-10 before:mx-auto before:size-8 before:rounded before:opacity-0 before:transition-all before:duration-200 before:ease-out hover:text-blue-400 before:hover:opacity-35"
@@ -55,7 +60,8 @@
 			<span class="mb-0.5">
 				<Tooltip content="Watchlist">
 					<a
-						href="/"
+						id="watchlist"
+						href="/watchlist"
 						onclick={() => updateCurrentLink(3)}
 						class:text-blue-400={currentLink === 3}
 						class="before:hover:bg-black-500 relative z-10 flex items-center justify-center transition-all duration-200 ease-out before:absolute before:-z-10 before:mx-auto before:size-8 before:rounded before:opacity-0 before:transition-all before:duration-200 before:ease-out hover:text-blue-400 before:hover:opacity-35"
@@ -68,7 +74,8 @@
 			<span class="mb-0.5">
 				<Tooltip content="Preferences">
 					<a
-						href="/"
+						id="preferences"
+						href="/preferences"
 						onclick={() => updateCurrentLink(4)}
 						class:text-blue-400={currentLink === 4}
 						class="before:hover:bg-black-500 ease before:ease relative z-10 flex items-center justify-center transition-all duration-200 before:absolute before:-z-10 before:mx-auto before:size-8 before:rounded before:opacity-0 before:transition-all before:duration-200 hover:text-blue-400 before:hover:opacity-35"
