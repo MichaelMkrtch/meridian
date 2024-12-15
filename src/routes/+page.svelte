@@ -6,7 +6,7 @@
 	<title>Meridian</title>
 </svelte:head>
 
-<div class="mx-auto h-full w-full max-w-[1350px]">
+<div class="mx-auto h-full w-full max-w-[1350px] px-20">
 	<Header title="Hello, Michael" />
 	<main></main>
 </div>

@@ -16,7 +16,7 @@
 	const fullDate = new Intl.DateTimeFormat('en-US', options).format();
 </script>
 
-<header class="flex h-36 items-center justify-between border-b border-zinc-800 p-20">
+<header class="flex h-36 items-center justify-between border-b border-zinc-800">
 	<div class="flex flex-col">
 		<h1 class="-mb-0.5 text-2xl font-semibold text-zinc-50">{title}</h1>
 		<p class="text-lg text-zinc-500">{isPreferences ? 'email' : fullDate}</p>
