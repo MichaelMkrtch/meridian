@@ -1,5 +1,5 @@
 <script lang="ts">
-	import SearchIcon from '../icons/SearchIcon.svelte';
+	import SearchIcon from '$lib/components/icons/SearchIcon.svelte';
 	import Tooltip from './tooltip/Tooltip.svelte';
 	import { page } from '$app/stores';
 
