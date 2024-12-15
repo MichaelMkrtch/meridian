@@ -4,7 +4,7 @@
 	import PreferencesIcon from './icons/PreferencesIcon.svelte';
 	import WatchlistIcon from './icons/WatchlistIcon.svelte';
 	import Tooltip from './ui/tooltip/Tooltip.svelte';
-	import { handleKeyDown, handleKeyUp } from '$lib/shortcuts.svelte.';
+	import { handleKeyDown, handleKeyUp } from '$lib/shortcuts.svelte';
 	import { page } from '$app/stores';
 	import { derived } from 'svelte/store';
 	import InfoIcon from './icons/InfoIcon.svelte';
