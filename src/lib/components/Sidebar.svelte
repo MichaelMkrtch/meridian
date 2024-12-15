@@ -30,7 +30,7 @@
 	<div class="bg-black-900 flex h-full w-full flex-col items-center justify-center">
 		<span class="absolute top-5 text-2xl">M</span>
 
-		<div class="flex w-full flex-col items-center justify-between text-white/60">
+		<div class="flex w-full flex-col items-center justify-between font-sans text-white/60">
 			<!-- Active-Link Highlighter -->
 			<div
 				class:translate-y-0={$currentLink === 1}
