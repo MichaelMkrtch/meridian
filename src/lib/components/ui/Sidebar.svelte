@@ -47,7 +47,7 @@
 	>
 		<span class="text-2xl">M</span>
 
-		<div class="relative block w-full text-center font-sans text-white/60">
+		<div class="relative block w-full text-center font-sans text-zinc-400/80">
 			<!-- Active-Link Highlighter -->
 			<div
 				class:translate-y-0={$currentLink === 1}
@@ -71,7 +71,7 @@
 				</span>
 			{/each}
 		</div>
-		<span class="ease text-white/40 transition-colors delay-75 duration-200 hover:text-white/60">
+		<span class="ease text-zinc-500 transition-colors delay-75 duration-200 hover:text-zinc-400">
 			<Tooltip content="Latest updates" side="right">
 				<InfoIcon classes="w-[18px] h-5" />
 			</Tooltip>

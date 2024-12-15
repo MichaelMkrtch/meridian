@@ -26,8 +26,8 @@ const config: Config = {
 			colors: {
 				black: {
 					500: '#3A3A40',
-					800: '#1B1B1E',
-					900: '#18181B'
+					800: '#17181c',
+					900: '#13151A'
 				},
 				blue: {
 					400: '#00ABE7'

@@ -76,13 +76,37 @@
 
 		--ring: 0 0% 83.1%;
 	}
-}
 
-@layer base {
 	* {
 		@apply border-border;
 	}
 	body {
 		@apply bg-background text-foreground;
+	}
+}
+
+@layer utilities {
+	.textured-dark {
+		background:
+			linear-gradient(rgb(37, 38, 43), rgb(37, 38, 43)) padding-box,
+			conic-gradient(
+					from 76deg at 50% 50%,
+					rgba(255, 255, 255, 0.03) -30deg,
+					rgba(255, 255, 255, 0.01) 120deg,
+					rgba(255, 255, 255, 0.12) 200deg,
+					rgba(255, 255, 255, 0.05) 250deg,
+					rgba(255, 255, 255, 0.02) 290deg,
+					rgba(255, 255, 255, 0.03) 330deg,
+					rgba(255, 255, 255, 0.01) 485deg
+				)
+				border-box;
+	}
+
+	.shadow-small {
+		box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 2px;
+	}
+
+	.shadow-inset {
+		box-shadow: inset rgba(0, 0, 0, 0.25) 0px 1px 3px 1px;
 	}
 }
