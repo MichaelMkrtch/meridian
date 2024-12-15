@@ -41,9 +41,9 @@
 
 <svelte:window onkeydown={handleKeyDown} onkeyup={handleKeyUp} />
 
-<section class="bg-gradient-highlight flex h-full w-[51px] pr-[1px]">
+<section class="z-50 flex h-full w-[51px] bg-gradient-highlight pr-[1px]">
 	<div
-		class="bg-black-900 relative top-0 flex h-full w-full flex-col items-center justify-between pb-8 pt-6"
+		class="relative top-0 flex h-full w-full flex-col items-center justify-between bg-black-900 pb-8 pt-6"
 	>
 		<span class="text-2xl">M</span>
 
@@ -63,7 +63,7 @@
 						<a
 							href={tab.href}
 							class:text-blue-400={$currentLink === tab.id}
-							class="before:hover:bg-black-500 relative z-10 flex items-center justify-center transition-all duration-200 ease-out before:absolute before:-z-10 before:mx-auto before:size-8 before:rounded before:opacity-0 before:transition-all before:duration-200 before:ease-out hover:text-blue-400 before:hover:opacity-35"
+							class="relative z-10 flex items-center justify-center transition-all duration-200 ease-out before:absolute before:-z-10 before:mx-auto before:size-8 before:rounded before:opacity-0 before:transition-all before:duration-200 before:ease-out hover:text-blue-400 before:hover:bg-black-500 before:hover:opacity-35"
 						>
 							<svelte:component this={tab.icon} classes="w-5 h-10" />
 						</a>
