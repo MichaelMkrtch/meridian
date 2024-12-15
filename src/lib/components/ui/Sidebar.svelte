@@ -1,13 +1,13 @@
 <script lang="ts">
-	import MetricsIcon from './icons/MetricsIcon.svelte';
-	import HomeIcon from './icons/HomeIcon.svelte';
-	import PreferencesIcon from './icons/PreferencesIcon.svelte';
-	import WatchlistIcon from './icons/WatchlistIcon.svelte';
-	import Tooltip from './ui/tooltip/Tooltip.svelte';
+	import MetricsIcon from '../icons/MetricsIcon.svelte';
+	import HomeIcon from '../icons/HomeIcon.svelte';
+	import PreferencesIcon from '../icons/PreferencesIcon.svelte';
+	import WatchlistIcon from '../icons/WatchlistIcon.svelte';
+	import Tooltip from './tooltip/Tooltip.svelte';
 	import { handleKeyDown, handleKeyUp } from '$lib/shortcuts.svelte';
 	import { page } from '$app/stores';
 	import { derived } from 'svelte/store';
-	import InfoIcon from './icons/InfoIcon.svelte';
+	import InfoIcon from '../icons/InfoIcon.svelte';
 
 	const currentLink = derived(page, ($page) => {
 		const path = $page.url.pathname;
@@ -41,7 +41,7 @@
 
 <svelte:window onkeydown={handleKeyDown} onkeyup={handleKeyUp} />
 
-<section class="z-50 flex h-full w-[51px] bg-gradient-highlight pr-[1px]">
+<nav class="z-50 flex h-full w-[51px] bg-gradient-highlight pr-[1px]">
 	<div
 		class="relative top-0 flex h-full w-full flex-col items-center justify-between bg-black-900 pb-8 pt-6"
 	>
@@ -59,7 +59,7 @@
 
 			{#each tabs as tab (tab.id)}
 				<span class="mb-2.5 block h-10">
-					<Tooltip content={tab.name} key1={tab.key1} key2={tab.key2}>
+					<Tooltip content={tab.name} side="right" key1={tab.key1} key2={tab.key2}>
 						<a
 							href={tab.href}
 							class:text-blue-400={$currentLink === tab.id}
@@ -71,10 +71,10 @@
 				</span>
 			{/each}
 		</div>
-		<span class="ease text-white/40 transition-colors duration-200 hover:text-white/60">
-			<Tooltip content="Latest updates">
+		<span class="ease text-white/40 transition-colors delay-75 duration-200 hover:text-white/60">
+			<Tooltip content="Latest updates" side="right">
 				<InfoIcon classes="w-[18px] h-5" />
 			</Tooltip>
 		</span>
 	</div>
-</section>
+</nav>

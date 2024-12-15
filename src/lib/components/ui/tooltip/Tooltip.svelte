@@ -4,12 +4,14 @@
 
 	type TooltipProps = {
 		content: string;
+		side: 'top' | 'right' | 'bottom' | 'left';
+		sideOffset?: number;
 		key1?: string;
 		key2?: string;
 		children: Snippet;
 	};
 
-	let { content, key1, key2, children }: TooltipProps = $props();
+	let { content, side, key1, key2, children, sideOffset = 25 }: TooltipProps = $props();
 </script>
 
 <Tooltip.Provider>
@@ -17,14 +19,16 @@
 		<Tooltip.Trigger>
 			{@render children()}
 		</Tooltip.Trigger>
-		<Tooltip.Content side="right" sideOffset={25}>
+		<Tooltip.Content {side} {sideOffset}>
 			<p class="text-[13px] tracking-wide">
 				{content}
-				{#if key1 && key2}
-					<span class="pl-3.5"></span>
-					<span class="bg-black-500/40 rounded px-1 py-[1px] text-xs">{key1}</span>
+				{#if key1}
+					<span class:pl-3.5={key1 && key2} class:pl-1={key1 && !key2}></span>
+					<span class="rounded bg-black-500/40 px-1 py-[1px] text-xs">{key1}</span>
+				{/if}
+				{#if key2}
 					then
-					<span class="bg-black-500/40 rounded px-1 py-[1px] text-xs">{key2}</span>
+					<span class="rounded bg-black-500/40 px-1 py-[1px] text-xs">{key2}</span>
 				{/if}
 			</p>
 		</Tooltip.Content>
