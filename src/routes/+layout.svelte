@@ -4,6 +4,7 @@
 	let { children } = $props();
 </script>
 
-<Sidebar />
-
-{@render children()}
+<div class="flex h-full w-full">
+	<Sidebar />
+	{@render children()}
+</div>
