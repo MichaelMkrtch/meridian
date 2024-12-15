@@ -35,5 +35,10 @@
 		"typescript": "^5.0.0",
 		"typescript-eslint": "^8.0.0",
 		"vite": "^6.0.0"
+	},
+	"dependencies": {
+		"d3-array": "^3.2.4",
+		"d3-scale": "^4.0.2",
+		"layerchart": "^0.60.0"
 	}
 }
