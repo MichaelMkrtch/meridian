@@ -57,7 +57,7 @@
 				class={`ease absolute right-0 top-0 h-10 w-[1px] origin-top bg-blue-400 transition-transform delay-75 duration-200`}
 			></div>
 
-			{#each tabs as tab}
+			{#each tabs as tab (tab.id)}
 				<span class="mb-2.5 block h-10">
 					<Tooltip content={tab.name} key1={tab.key1} key2={tab.key2}>
 						<a
@@ -71,10 +71,10 @@
 				</span>
 			{/each}
 		</div>
-		<button class="ease text-white/40 transition-colors duration-200 hover:text-white/60">
+		<span class="ease text-white/40 transition-colors duration-200 hover:text-white/60">
 			<Tooltip content="Latest updates">
 				<InfoIcon classes="w-[18px] h-5" />
 			</Tooltip>
-		</button>
+		</span>
 	</div>
 </section>
